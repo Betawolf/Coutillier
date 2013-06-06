@@ -1,0 +1,301 @@
+This file is a checklist of Gendarme 2.10 rules for Coutillier to implement.
+Those rules with an [a] next to them have been implemented and are part of what
+Coutillier checks. Those with a [x] next to them have been examined and found
+to be unimplementable in Coutillier, or have been dropped for other reasons.
+Those rules with an empty box [ ] have yet to be worked on.
+
+# Gendarme.Rules.BadPractice
+	-[ ]-AvoidAssemblyVersionMismatchRule
+	-[ ]-AvoidCallingProblematicMethodsRule
+	-[ ]-AvoidVisibleConstantFieldRule
+	-[ ]-CheckNewExceptionWithoutThrowingRule
+	-[ ]-CheckNewThreadWithoutStartRule
+	-[ ]-CloneMethodShouldNotReturnNullRule
+	-[ ]-ConstructorShouldNotCallVirtualMethodsRule
+	-[ ]-DisableDebuggingCodeRule
+	-[ ]-DoNotForgetNotImplementedMethodsRule
+	-[ ]-DoNotUseEnumIsAssignableFromRule
+	-[ ]-DoNotUseGetInterfaceToCheckAssignabilityRule
+	-[ ]-EqualsShouldHandleNullArgRule
+	-[ ]-GetEntryAssemblyMayReturnNullRule
+	-[ ]-ObsoleteMessagesShouldNotBeEmptyRule
+	-[ ]-OnlyUseDisposeForIDisposableTypesRule
+	-[ ]-PreferEmptyInstanceOverNullRule
+	-[ ]-PreferParamsArrayForVariableArgumentsRule
+	-[ ]-PreferSafeHandleRule
+	-[ ]-PreferTryParseRule
+	-[ ]-ReplaceIncompleteOddnessCheckRule
+	-[ ]-ToStringShouldNotReturnNullRule
+	-[ ]-UseFileOpenOnlyWithFileAccessRule
+
+# Gendarme.Rules.Concurrency
+	-[ ]-DecorateThreadsRule
+	-[ ]-DoNotLockOnThisOrTypesRule
+	-[ ]-DoNotLockOnWeakIdentityObjectsRule
+	-[ ]-DoNotUseLockedRegionOutsideMethodRule
+	-[ ]-DoNotUseMethodImplOptionsSynchronizedRule
+	-[ ]-DoNotUseThreadStaticWithInstanceFieldsRule
+	-[ ]-DoubleCheckLockingRule
+	-[ ]-NonConstantStaticFieldsShouldNotBeVisibleRule
+	-[ ]-ProtectCallToEventDelegatesRule
+	-[ ]-ReviewLockUsedOnlyForOperationsOnVariablesRule
+	-[ ]-WriteStaticFieldFromInstanceMethodRule
+
+# Gendarme.Rules.Correctness
+	-[ ]-AttributeStringLiteralsShouldParseCorrectlyRule
+	-[ ]-AvoidCodeWithSideEffectsInConditionalCodeRule
+	-[ ]-AvoidConstructorsInStaticTypesRule
+	-[ ]-AvoidFloatingPointEqualityRule
+	-[ ]-AvoidMethodsWithSideEffectsInConditionalCodeRule
+	-[ ]-BadRecursiveInvocationRule
+	-[ ]-CallingEqualsWithNullArgRule
+	-[ ]-CheckParametersNullityInVisibleMethodsRule
+	-[ ]-DisposableFieldsShouldBeDisposedRule
+	-[ ]-DoNotCompareWithNaNRule
+	-[ ]-DoNotRecurseInEqualityRule
+	-[ ]-DoNotRoundIntegersRule
+	-[ ]-EnsureLocalDisposalRule
+	-[ ]-FinalizersShouldCallBaseClassFinalizerRule
+	-[ ]-MethodCanBeMadeStaticRule
+	-[ ]-ProvideCorrectArgumentsToFormattingMethodsRule
+	-[ ]-ProvideCorrectRegexPatternRule
+	-[ ]-ProvideValidXmlStringRule
+	-[ ]-ProvideValidXPathExpressionRule
+	-[ ]-ReviewCastOnIntegerDivisionRule
+	-[ ]-ReviewCastOnIntegerMultiplicationRule
+	-[ ]-ReviewDoubleAssignmentRule
+	-[ ]-ReviewInconsistentIdentityRule
+	-[ ]-ReviewSelfAssignmentRule
+	-[ ]-ReviewUselessControlFlowRule
+	-[ ]-ReviewUseOfInt64BitsToDoubleRule
+	-[ ]-ReviewUseOfModuloOneOnIntegersRule
+	-[ ]-UseNoInliningWithGetCallingAssemblyRule
+	-[ ]-UseValueInPropertySetterRule
+
+# Gendarme.Rules.Design
+	-[ ]-AbstractTypesShouldNotHavePublicConstructorsRule
+	-[ ]-AttributeArgumentsShouldHaveAccessorsRule
+	-[ ]-AvoidEmptyInterfaceRule
+	-[ ]-AvoidMultidimensionalIndexerRule
+	-[ ]-AvoidPropertiesWithoutGetAccessorRule
+	-[ ]-AvoidRefAndOutParametersRule
+	-[ ]-AvoidSmallNamespaceRule
+	-[ ]-AvoidVisibleFieldsRule
+	-[ ]-AvoidVisibleNestedTypesRule
+	-[ ]-ConsiderAddingInterfaceRule
+	-[ ]-ConsiderConvertingFieldToNullableRule
+	-[ ]-ConsiderConvertingMethodToPropertyRule
+	-[ ]-ConsiderUsingStaticTypeRule
+	-[ ]-DeclareEventHandlersCorrectlyRule
+	-[ ]-DisposableTypesShouldHaveFinalizerRule
+	-[ ]-DoNotDeclareProtectedMembersInSealedTypeRule
+	-[ ]-DoNotDeclareVirtualMethodsInSealedTypeRule
+	-[ ]-EnsureSymmetryForOverloadedOperatorsRule
+	-[ ]-EnumeratorsShouldBeStronglyTypedRule
+	-[ ]-EnumsShouldDefineAZeroValueRule
+	-[ ]-EnumsShouldUseInt32Rule
+	-[ ]-FinalizersShouldBeProtectedRule
+	-[ ]-FlagsShouldNotDefineAZeroValueRule
+	-[ ]-ImplementEqualsAndGetHashCodeInPairRule
+	-[ ]-ImplementICloneableCorrectlyRule
+	-[ ]-ImplementIComparableCorrectlyRule
+	-[ ]-InternalNamespacesShouldNotExposeTypesRule
+	-[ ]-ListsAreStronglyTypedRule
+	-[ ]-MainShouldNotBePublicRule
+	-[ ]-MarkAssemblyWithAssemblyVersionRule
+	-[ ]-MarkAssemblyWithCLSCompliantRule
+	-[ ]-MarkAssemblyWithComVisibleRule
+	-[ ]-MissingAttributeUsageOnCustomAttributeRule
+	-[ ]-OperatorEqualsShouldBeOverloadedRule
+	-[ ]-OverrideEqualsMethodRule
+	-[ ]-PreferEventsOverMethodsRule
+	-[ ]-PreferIntegerOrStringForIndexersRule
+	-[ ]-PreferUriOverStringRule
+	-[ ]-PreferXmlAbstractionsRule
+	-[ ]-ProvideAlternativeNamesForOperatorOverloadsRule
+	-[ ]-ProvideTryParseAlternativeRule
+	-[ ]-StronglyTypeICollectionMembersRule
+	-[ ]-TypesShouldBeInsideNamespacesRule
+	-[ ]-TypesWithDisposableFieldsShouldBeDisposableRule
+	-[ ]-TypesWithNativeFieldsShouldBeDisposableRule
+	-[ ]-UseCorrectDisposeSignaturesRule
+	-[ ]-UseFlagsAttributeRule
+
+# Gendarme.Rules.Design.Generic
+	-[ ]-AvoidDeclaringCustomDelegatesRule
+	-[ ]-AvoidExcessiveParametersOnGenericTypesRule
+	-[ ]-AvoidMethodWithUnusedGenericTypeRule
+	-[ ]-DoNotDeclareStaticMembersOnGenericTypesRule
+	-[ ]-DoNotExposeGenericListsRule
+	-[ ]-DoNotExposeNestedGenericSignaturesRule
+	-[ ]-ImplementGenericCollectionInterfacesRule
+	-[ ]-PreferGenericsOverRefObjectRule
+	-[ ]-UseGenericEventHandlerRule
+
+# Gendarme.Rules.Design.Linq
+	-[]-AvoidExtensionMethodOnSystemObjectRule
+
+# Gendarme.Rules.Exceptions
+	-[ ]-AvoidArgumentExceptionDefaultConstructorRule
+	-[ ]-AvoidThrowingBasicExceptionsRule
+	-[ ]-DoNotDestroyStackTraceRule
+	-[ ]-DoNotSwallowErrorsCatchingNonSpecificExceptionsRule
+	-[ ]-DoNotThrowInUnexpectedLocationRule
+	-[ ]-DoNotThrowReservedExceptionRule
+	-[ ]-ExceptionShouldBeVisibleRule
+	-[ ]-InstantiateArgumentExceptionCorrectlyRule
+	-[ ]-MissingExceptionConstructorsRule
+	-[ ]-UseObjectDisposedExceptionRule
+
+# Gendarme.Rules.Gendarme
+	-[ ]-DefectsMustBeReportedRule
+	-[ ]-DoNotThrowExceptionRule
+	-[ ]-MissingEngineDependencyRule
+	-[ ]-ReviewAttributesOnRulesRule
+	-[ ]-UseCorrectSuffixRule
+
+# Gendarme.Rules.Globalization
+	-[ ]-AvoidUnusedInternalResourceRule
+	-[ ]-SatelliteResourceMismatchRule
+
+# Gendarme.Rules.Interoperability
+	-[ ]-CentralizePInvokesIntoNativeMethodsTypeRule
+	-[ ]-DelegatesPassedToNativeCodeMustIncludeExceptionHandlingRule
+	-[ ]-DoNotAssumeIntPtrSizeRule
+	-[ ]-GetLastErrorMustBeCalledRightAfterPInvokeRule
+	-[ ]-MarshalBooleansInPInvokeDeclarationsRule
+	-[ ]-MarshalStringsInPInvokeDeclarationsRule
+	-[ ]-PInvokeShouldNotBeVisibleRule
+	-[ ]-UseManagedAlternativesToPInvokeRule
+
+# Gendarme.Rules.Interoperability.Com
+	-[ ]-AutoLayoutTypesShouldNotBeComVisibleRule
+	-[ ]-AvoidInt64ArgumentsInComVisibleMethodsRule
+	-[ ]-AvoidNonPublicFieldsInComVisibleValueTypesRule
+	-[ ]-AvoidOverloadsInComVisibleInterfacesRule
+	-[ ]-AvoidStaticMembersInComVisibleTypesRule
+	-[ ]-ComVisibleShouldInheritFromComVisibleRule
+	-[ ]-ComVisibleTypesShouldBeCreatableRule
+	-[ ]-DoNotUseAutoDualClassInterfaceTypeRule
+	-[ ]-MarkComSourceInterfacesAsIDispatchRule
+	-[ ]-ReviewComRegistrationMethodsRule
+
+# Gendarme.Rules.Maintainability
+	-[ ]-AvoidAlwaysNullFieldRule
+	-[ ]-AvoidComplexMethodsRule
+	-[ ]-AvoidDeepInheritanceTreeRule
+	-[ ]-AvoidLackOfCohesionOfMethodsRule
+	-[ ]-AvoidUnnecessarySpecializationRule
+	-[ ]-ConsiderUsingStopwatchRule
+	-[ ]-PreferStringIsNullOrEmptyRule
+	-[ ]-RemoveDependenceOnObsoleteCodeRule
+	-[ ]-ReviewMisleadingFieldNamesRule
+	-[ ]-VariableNamesShouldNotMatchFieldNamesRule
+
+# Gendarme.Rules.Naming
+	-[ ]-AvoidDeepNamespaceHierarchyRule
+	-[ ]-AvoidNonAlphanumericIdentifierRule
+	-[ ]-AvoidRedundancyInMethodNameRule
+	-[ ]-AvoidRedundancyInTypeNameRule
+	-[ ]-AvoidTypeInterfaceInconsistencyRule
+	-[ ]-DoNotPrefixEventsWithAfterOrBeforeRule
+	-[ ]-DoNotPrefixValuesWithEnumNameRule
+	-[ ]-DoNotUseReservedInEnumValueNamesRule
+	-[ ]-ParameterNamesShouldMatchOverriddenMethodRule
+	-[ ]-UseCorrectCasingRule
+	-[ ]-UseCorrectPrefixRule
+	-[ ]-UseCorrectSuffixRule
+	-[ ]-UsePluralNameInEnumFlagsRule
+	-[ ]-UsePreferredTermsRule
+	-[ ]-UseSingularNameInEnumsUnlessAreFlagsRule
+
+# Gendarme.Rules.NUnit
+	-[ ]-ProvideMessageOnAssertCallsRule
+	-[ ]-TestMethodsMustBePublicRule
+	-[ ]-UnitTestsMissingTestFixtureRule
+
+# Gendarme.Rules.Performance
+	-[ ]-AvoidConcatenatingCharsRule
+	-[ ]-AvoidLargeNumberOfLocalVariablesRule
+	-[ ]-AvoidLargeStructureRule
+	-[ ]-AvoidLocalDataStoreSlotRule
+	-[ ]-AvoidMethodWithLargeMaximumStackSizeRule
+	-[ ]-AvoidRepetitiveCallsToPropertiesRule
+	-[ ]-AvoidRepetitiveCastsRule
+	-[ ]-AvoidReturningArraysOnPropertiesRule
+	-[ ]-AvoidTypeGetTypeForConstantStringsRule
+	-[ ]-AvoidUncalledPrivateCodeRule
+	-[ ]-AvoidUninstantiatedInternalClassesRule
+	-[ ]-AvoidUnnecessaryOverridesRule
+	-[ ]-AvoidUnneededCallsOnStringRule
+	-[ ]-AvoidUnneededFieldInitializationRule
+	-[ ]-AvoidUnneededUnboxingRule
+	-[ ]-AvoidUnsealedConcreteAttributesRule
+	-[ ]-AvoidUnsealedUninheritedInternalTypeRule
+	-[ ]-AvoidUnusedParametersRule
+	-[ ]-AvoidUnusedPrivateFieldsRule
+	-[ ]-CompareWithEmptyStringEfficientlyRule
+	-[ ]-ConsiderCustomAccessorsForNonVisibleEventsRule
+	-[ ]-DoNotIgnoreMethodResultRule
+	-[ ]-ImplementEqualsTypeRule
+	-[ ]-MathMinMaxCandidateRule
+	-[ ]-OverrideValueTypeDefaultsRule
+	-[ ]-PreferCharOverloadRule
+	-[ ]-PreferInterfaceConstraintOnGenericParameterForPrimitiveInterfaceRule
+	-[ ]-PreferLiteralOverInitOnlyFieldsRule
+	-[ ]-RemoveUnneededFinalizerRule
+	-[ ]-RemoveUnusedLocalVariablesRule
+	-[ ]-ReviewLinqMethodRule
+	-[ ]-UseIsOperatorRule
+	-[ ]-UseStringEmptyRule
+	-[ ]-UseSuppressFinalizeOnIDisposableTypeWithFinalizerRule
+	-[ ]-UseTypeEmptyTypesRul 
+
+# Gendarme.Rules.Portability
+	-[ ]-DoNotHardcodePathsRule
+	-[ ]-ExitCodeIsLimitedOnUnixRule
+	-[ ]-FeatureRequiresRootPrivilegeOnUnixRule
+	-[ ]-MonoCompatibilityReviewRule
+	-[ ]-NewLineLiteralRule
+
+# Gendarme.Rules.Security
+	-[ ]-ArrayFieldsShouldNotBeReadOnlyRule
+	-[ ]-DoNotShortCircuitCertificateCheckRule
+	-[ ]-NativeFieldsShouldNotBeVisibleRule
+	-[ ]-StaticConstructorsShouldBePrivateRule
+
+# Gendarme.Rules.Security.Cas
+	-[ ]-AddMissingTypeInheritanceDemandRule
+	-[ ]-DoNotExposeFieldsInSecuredTypeRule
+	-[ ]-DoNotExposeMethodsProtectedByLinkDemandRule
+	-[ ]-DoNotReduceTypeSecurityOnMethodsRule
+	-[ ]-ReviewSealedTypeWithInheritanceDemandRule
+	-[ ]-ReviewSuppressUnmanagedCodeSecurityUsageRule
+	-[ ]-SecureGetObjectDataOverridesRule
+
+# Gendarme.Rules.Serialization
+	-[ ]-CallBaseMethodsOnISerializableTypesRule
+	-[ ]-DeserializeOptionalFieldRule
+	-[ ]-ImplementISerializableCorrectlyRule
+	-[ ]-MarkAllNonSerializableFieldsRule
+	-[ ]-MarkEnumerationsAsSerializableRule
+	-[ ]-MissingSerializableAttributeOnISerializableTypeRule
+	-[ ]-MissingSerializationConstructorRule
+	-[ ]-UseCorrectSignatureForSerializationMethodsRule
+
+# Gendarme.Rules.Smells
+	-[ ]-AvoidCodeDuplicatedInSameClassRule
+	-[ ]-AvoidCodeDuplicatedInSiblingClassesRule
+	-[ ]-AvoidLargeClassesRule
+	-[ ]-AvoidLongMethodsRule
+	-[ ]-AvoidLongParameterListsRule
+	-[ ]-AvoidMessageChainsRule
+	-[ ]-AvoidSpeculativeGeneralityRule
+	-[ ]-AvoidSwitchStatementsRule
+
+# Gendarme.Rules.Ui
+	-[ ]-AddMatchingArrangeMeasureOverrideRule
+	-[ ]-GtkSharpExecutableTargetRule
+	-[ ]-SystemWindowsFormsExecutableTargetRule
+	-[ ]-UseSTAThreadAttributeOnSWFEntryPointsRule
+

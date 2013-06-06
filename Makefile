@@ -18,12 +18,15 @@ $(OUT) : $(EXE) $(RUNTIMELIBS)
 	echo "mono $(EXE) \$$@" >> $(OUT)
 	chmod +x $(OUT)
 
-$(EXE) : $(SOURCE)
+$(EXE) : $(SOURCE) $(BINDIR)
 	$(CC) $(LIBS) $(SOURCE) -out:$(EXE)
 
-$(RUNTIMELIBS) :
+$(RUNTIMELIBS) : $(BINDIR)
 	cp nrefact/*.dll $(BINDIR)
 
-clean : 
+$(BINDIR) :
+	mkdir $(BINDIR)
+
+clean : $(BINDIR)
 	rm $(BINDIR)/*
 
